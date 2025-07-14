@@ -61,7 +61,7 @@ const Hero = () => {
               onClick={() => scrollToSection('sobre')}
               size="lg"
               variant="outline"
-              className="btn-outline-hero text-lg px-8 py-6 text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10"
+              className="btn-outline-hero text-lg px-8 py-6 text-primary-foreground border-primary-foreground/30 bg-primary-foreground/10"
             >
               <Play className="mr-2 h-5 w-5" />
               Saiba mais
