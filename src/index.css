@@ -2,87 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Design system para Harmonia - Bem-estar Corporativo
+Paleta: tons suaves de azul, verde e bege (calmantes e corporativos)
+Tipografia: Inter (profissional e moderna)
 */
 
 @layer base {
   :root {
+    /* Brand Colors - Harmonia */
+    --primary: 210 32% 42%;           /* Azul profissional acinzentado */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 45% 65%;     /* Azul mais claro */
+    --primary-glow: 210 50% 85%;      /* Azul muito suave */
+    
+    --secondary: 142 35% 55%;         /* Verde suave e natural */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 142 40% 75%;   /* Verde claro */
+    
+    --accent: 35 25% 85%;             /* Bege creme acolhedor */
+    --accent-foreground: 210 32% 42%;
+    --accent-warm: 35 30% 90%;        /* Bege mais quente */
+    
+    /* Neutral Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 210 20% 15%;        /* Cinza escuro profissional */
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 20% 15%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 210 20% 15%;
+    
+    --muted: 210 15% 96%;             /* Cinza muito claro */
+    --muted-foreground: 210 15% 45%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 32% 42%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--secondary) / 0.9));
+    --gradient-accent: linear-gradient(180deg, hsl(var(--accent-warm)), hsl(var(--background)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--accent-warm) / 0.3));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted) / 0.5));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Sidebar styles */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --primary: 210 45% 65%;
+    --primary-foreground: 210 32% 15%;
+    --primary-light: 210 50% 75%;
+    --primary-glow: 210 55% 85%;
+    
+    --secondary: 142 40% 65%;
+    --secondary-foreground: 142 35% 15%;
+    --secondary-light: 142 45% 75%;
+    
+    --accent: 35 20% 25%;
+    --accent-foreground: 35 25% 85%;
+    --accent-warm: 35 25% 30%;
+    
+    --background: 210 25% 8%;
+    --foreground: 210 15% 90%;
+    
+    --card: 210 25% 12%;
+    --card-foreground: 210 15% 90%;
+    
+    --popover: 210 25% 12%;
+    --popover-foreground: 210 15% 90%;
+    
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 15% 55%;
+    
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 210 45% 65%;
+    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +121,50 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .hero-bg {
+    background: var(--gradient-hero);
+  }
+  
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card hover:-translate-y-1;
+  }
+  
+  /* Smooth fade in animation */
+  .fade-in {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  /* Container with max width */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Button variants */
+  .btn-hero {
+    @apply bg-gradient-primary hover:opacity-90 shadow-soft hover:shadow-card;
+  }
+  
+  .btn-outline-hero {
+    @apply border-2 border-primary/20 bg-background/80 backdrop-blur-sm hover:bg-primary/10;
   }
 }
