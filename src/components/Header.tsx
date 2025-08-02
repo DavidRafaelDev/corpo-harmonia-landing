@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">{" "}
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl lg:text-3xl font-bold" style={{color: '#637949'}}>
+            <div className="text-2xl lg:text-3xl font-bold text-primary">
               Harmonia
             </div>
           </div>
@@ -69,7 +69,6 @@ const Header = () => {
             <Button
               onClick={() => scrollToSection('contato')}
               className="btn-hero"
-              style={{background: 'linear-gradient(135deg, #637949, #8fa060)'}}
             >
               Agende uma conversa gratuita
             </Button>
@@ -116,7 +115,6 @@ const Header = () => {
                 <Button
                   onClick={() => scrollToSection('contato')}
                   className="w-full btn-hero"
-                  style={{background: 'linear-gradient(135deg, #637949, #8fa060)'}}
                 >
                   Agende uma conversa gratuita
                 </Button>

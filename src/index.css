@@ -10,10 +10,10 @@ Tipografia: Inter (profissional e moderna)
 @layer base {
   :root {
     /* Brand Colors - Harmonia */
-    --primary: 210 32% 42%;           /* Azul profissional acinzentado */
+    --primary: 95 32% 37%;            /* Verde profissional #637949 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 45% 65%;     /* Azul mais claro */
-    --primary-glow: 210 50% 85%;      /* Azul muito suave */
+    --primary-light: 95 35% 50%;      /* Verde mais claro */
+    --primary-glow: 95 40% 70%;       /* Verde muito suave */
     
     --secondary: 142 35% 55%;         /* Verde suave e natural */
     --secondary-foreground: 0 0% 100%;
@@ -72,10 +72,10 @@ Tipografia: Inter (profissional e moderna)
   }
 
   .dark {
-    --primary: 210 45% 65%;
-    --primary-foreground: 210 32% 15%;
-    --primary-light: 210 50% 75%;
-    --primary-glow: 210 55% 85%;
+    --primary: 95 35% 50%;
+    --primary-foreground: 95 32% 15%;
+    --primary-light: 95 40% 60%;
+    --primary-glow: 95 45% 75%;
     
     --secondary: 142 40% 65%;
     --secondary-foreground: 142 35% 15%;
