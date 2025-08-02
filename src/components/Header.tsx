@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl lg:text-3xl font-bold text-green-600">
+            <div className="text-2xl lg:text-3xl font-bold" style={{color: '#637949'}}>
               Harmonia
             </div>
           </div>
