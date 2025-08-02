@@ -69,6 +69,7 @@ const Header = () => {
             <Button
               onClick={() => scrollToSection('contato')}
               className="btn-hero"
+              style={{background: 'linear-gradient(135deg, #637949, #8fa060)'}}
             >
               Agende uma conversa gratuita
             </Button>
@@ -115,6 +116,7 @@ const Header = () => {
                 <Button
                   onClick={() => scrollToSection('contato')}
                   className="w-full btn-hero"
+                  style={{background: 'linear-gradient(135deg, #637949, #8fa060)'}}
                 >
                   Agende uma conversa gratuita
                 </Button>
