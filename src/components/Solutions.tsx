@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Brain, Target, Flower } from "lucide-react";
-import reikiImage from "@/assets/reiki-illustration.jpg";
-import meditationImage from "@/assets/meditation-illustration.jpg";
-import acupunctureImage from "@/assets/acupuncture-illustration.jpg";
-import aromatherapyImage from "@/assets/aromatherapy-illustration.jpg";
+import reikiImage from "/lovable-uploads/d1f7eb15-6c6f-4b45-9803-0f51830805b9.png";
+import meditationImage from "/lovable-uploads/59410714-3f6c-485f-81d6-5aecd0b7abc7.png";
+import acupunctureImage from "/lovable-uploads/1f26f7e2-5499-450d-aed0-91fb78276d3f.png";
+import aromatherapyImage from "/lovable-uploads/c1d0fb35-6462-4398-b827-06562f94c03a.png";
 
 const Solutions = () => {
   const solutions = [
