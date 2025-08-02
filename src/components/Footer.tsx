@@ -93,7 +93,6 @@ const Footer = () => {
                 <Phone className="w-4 h-4 mt-1 opacity-90" />
                 <div className="text-sm opacity-90">
                   <p>(11) 3456-7890</p>
-                  <p>(11) 98765-4321</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
