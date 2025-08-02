@@ -102,13 +102,6 @@ const Footer = () => {
                   <p>contato@harmonia.com.br</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 mt-1 opacity-90" />
-                <div className="text-sm opacity-90">
-                  <p>Av. Paulista, 1000 - Sala 1012</p>
-                  <p>Bela Vista, São Paulo - SP</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
