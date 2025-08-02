@@ -25,12 +25,12 @@ const Solutions = () => {
       benefits: ["Melhora o foco", "Reduz burnout", "Aumenta criatividade"]
     },
     {
-      title: "Acupuntura",
-      description: "Redução de dores e tensões físicas no trabalho",
-      details: "Prática milenar chinesa que trata dores relacionadas ao trabalho, como LER/DORT, dores nas costas e tensão muscular.",
+      title: "EFT (Emotional Freedom Techniques)",
+      description: "Redução a ansiedade e melhora a concentração",
+      details: "A EFT, também conhecida como tapping, é uma técnica que estimula pontos de acupressão no corpo",
       icon: Target,
       image: acupunctureImage,
-      benefits: ["Alivia dores", "Melhora postura", "Reduz tensão"]
+      benefits: ["Reduz estresse", "Reduz Ansiedade", "Melhora o foco"]
     },
     {
       title: "Aromaterapia",

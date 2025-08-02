@@ -59,6 +59,29 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- EmailJS (para envio de emails)
+
+## Configuração do Formulário de Contato
+
+Para configurar o envio de emails através do formulário de contato:
+
+1. **Configurar EmailJS**: Siga o guia em `EMAILJS_SETUP.md`
+2. **Variáveis de ambiente**: Copie `env.example` para `.env` e configure suas chaves
+3. **Testar**: Execute `npm run dev` e teste o formulário
+
+### Configuração Rápida
+
+```bash
+# 1. Copiar arquivo de exemplo
+cp env.example .env
+
+# 2. Editar .env com suas chaves do EmailJS
+# 3. Instalar dependências
+npm install
+
+# 4. Executar projeto
+npm run dev
+```
 
 ## How can I deploy this project?
 

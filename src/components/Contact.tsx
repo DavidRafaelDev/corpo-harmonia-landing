@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
+import { EMAILJS_CONFIG } from '@/config/emailjs';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -16,6 +18,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,7 +28,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validação simples
@@ -38,21 +41,76 @@ const Contact = () => {
       return;
     }
 
-    // Simular envio do formulário
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em até 24 horas.",
-    });
+    setIsSubmitting(true);
 
-    // Limpar formulário
-    setFormData({
-      name: '',
-      company: '',
-      role: '',
-      phone: '',
-      email: '',
-      message: ''
-    });
+    try {
+    
+      const message = `Nome: ${formData.name}
+      Empresa: ${formData.company}
+      Cargo: ${formData.role || 'Não informado'}
+      Telefone: ${formData.phone || 'Não informado'}
+      E-mail: ${formData.email}      
+      Mensagem:
+      ${formData.message || 'Nenhuma mensagem adicional'}
+              `.trim();
+
+      console.log('message', message);
+      // Configuração do EmailJS
+      const templateParams = {
+        to_name: "Equipe Harmonia",
+        from_name: formData.name,
+        from_company: formData.company,
+        from_role: formData.role,
+        from_phone: formData.phone,
+        from_email: formData.email,
+        message: message,
+        reply_to: formData.email,
+        // Mensagem completa com todos os dados
+        full_message: `
+Nome: ${formData.name}
+Empresa: ${formData.company}
+Cargo: ${formData.role || 'Não informado'}
+Telefone: ${formData.phone || 'Não informado'}
+E-mail: ${formData.email}
+
+Mensagem:
+${formData.message || 'Nenhuma mensagem adicional'}
+        `.trim()
+      };
+
+      // Enviar email usando EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.USER_ID
+      );
+
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Entraremos em contato em até 24 horas.",
+      });
+
+      // Limpar formulário
+      setFormData({
+        name: '',
+        company: '',
+        role: '',
+        phone: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Erro detalhado ao enviar email:', error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente em alguns instantes.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,9 +220,21 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full btn-hero text-lg py-6">
-                  <Send className="mr-2 h-5 w-5" />
-                  Enviar mensagem
+                <Button type="submit" className="w-full btn-hero text-lg py-6" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Enviar mensagem
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>

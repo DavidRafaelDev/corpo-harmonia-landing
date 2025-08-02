@@ -8,33 +8,33 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Maria Silva",
-      role: "Gerente de RH",
-      company: "TechSolutions Ltda",
-      content: "Implementamos o programa da Harmonia há 6 meses e os resultados são impressionantes. A redução do absenteísmo foi de 35% e os colaboradores estão visivelmente mais engajados e produtivos.",
+      name: "Rodrigo Almeida",
+      role: "Gerente de Projetos",
+      company: "",
+      content: "Os atendimentos da Harmonia impactaram diretamente meu desempenho e bem-estar. Notei melhora na clareza mental, redução do estresse e mais equilíbrio na rotina. Um investimento que recomendo a qualquer profissional.",
       rating: 5
     },
-    {
-      name: "João Santos",
-      role: "CEO",
-      company: "InovaCorp",
-      content: "As sessões de meditação e reiki transformaram completamente o clima organizacional. Nosso turnover caiu pela metade e a satisfação dos colaboradores aumentou significativamente.",
-      rating: 5
-    },
-    {
-      name: "Ana Costa",
-      role: "Diretora Executiva",
-      company: "Crescer Consultoria",
-      content: "O programa de bem-estar da Harmonia foi um investimento certeiro. Além dos benefícios para os colaboradores, percebemos um aumento real na produtividade e criatividade das equipes.",
-      rating: 5
-    },
-    {
-      name: "Carlos Mendes",
-      role: "Coordenador de Projetos",
-      company: "DesignHub",
-      content: "Como alguém que sofria com dores nas costas devido ao trabalho, a acupuntura oferecida pela empresa mudou minha vida. Agora trabalho com mais conforto e disposição.",
-      rating: 5
-    }
+    // {
+    //   name: "João Santos",
+    //   role: "CEO",
+    //   company: "InovaCorp",
+    //   content: "As sessões de meditação e reiki transformaram completamente o clima organizacional. Nosso turnover caiu pela metade e a satisfação dos colaboradores aumentou significativamente.",
+    //   rating: 5
+    // },
+    // {
+    //   name: "Ana Costa",
+    //   role: "Diretora Executiva",
+    //   company: "Crescer Consultoria",
+    //   content: "O programa de bem-estar da Harmonia foi um investimento certeiro. Além dos benefícios para os colaboradores, percebemos um aumento real na produtividade e criatividade das equipes.",
+    //   rating: 5
+    // },
+    // {
+    //   name: "Carlos Mendes",
+    //   role: "Coordenador de Projetos",
+    //   company: "DesignHub",
+    //   content: "Como alguém que sofria com dores nas costas devido ao trabalho, a acupuntura oferecida pela empresa mudou minha vida. Agora trabalho com mais conforto e disposição.",
+    //   rating: 5
+    // }
   ];
 
   const nextSlide = () => {
