@@ -28,7 +28,7 @@ const Header = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-soft' : 'bg-transparent'
     }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 lg:h-20 bg-white">{" "}
+        <div className="flex items-center justify-between h-16 lg:h-20">{" "}
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl lg:text-3xl font-bold" style={{color: '#637949'}}>
