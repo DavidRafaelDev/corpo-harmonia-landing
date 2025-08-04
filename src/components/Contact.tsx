@@ -268,18 +268,6 @@ ${formData.message || 'Nenhuma mensagem adicional'}
                       <p className="text-muted-foreground">harmonia.corporativo@gmail.com</p>
                     </div>
                   </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/30">
-                      <MapPin className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
-                      <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
