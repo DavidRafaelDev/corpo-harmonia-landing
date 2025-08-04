@@ -255,8 +255,7 @@ ${formData.message || 'Nenhuma mensagem adicional'}
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Telefone</h4>
-                      <p className="text-muted-foreground">(11) 3456-7890</p>
-                      <p className="text-muted-foreground">(11) 98765-4321</p>
+                      <p className="text-muted-foreground">(13) 99697-3231</p>
                     </div>
                   </div>
 
@@ -266,8 +265,7 @@ ${formData.message || 'Nenhuma mensagem adicional'}
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">E-mail</h4>
-                      <p className="text-muted-foreground">contato@harmonia.com.br</p>
-                      <p className="text-muted-foreground">comercial@harmonia.com.br</p>
+                      <p className="text-muted-foreground">harmonia.corporativo@gmail.com</p>
                     </div>
                   </div>
 
@@ -275,26 +273,11 @@ ${formData.message || 'Nenhuma mensagem adicional'}
                     <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/30">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">Endereço</h4>
-                      <p className="text-muted-foreground">
-                        Av. Paulista, 1000 - Sala 1012<br />
-                        Bela Vista, São Paulo - SP<br />
-                        CEP: 01310-100
-                      </p>
-                    </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                       <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">Horário</h4>
-                      <p className="text-muted-foreground">
-                        Segunda a Sexta: 8h às 18h<br />
-                        Sábado: 8h às 12h
-                      </p>
                     </div>
                   </div>
                 </div>
